@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".ui.LoginFragment"
+    android:orientation="vertical">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="7"
+        android:useDefaultMargins="false"
+        android:verticalSpacing="0dp">
+
+        <TextView
+            android:id="@+id/serverHostTextView"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:text="@string/server_host"
+            android:layout_gravity="right"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <EditText
+            android:id="@+id/serverHostEditText"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill_horizontal"
+            android:inputType="text"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/serverPortTextView"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:text="@string/server_port"
+            android:layout_gravity="right"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <EditText
+            android:id="@+id/serverPortEditText"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:layout_gravity="fill_horizontal"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:text="@string/username_text"
+            android:layout_gravity="right"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:layout_gravity="fill_horizontal"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/passwordTextView"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:text="@string/password_text"
+            android:layout_gravity="right"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:inputType="textPassword"
+            android:layout_gravity="fill_horizontal"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/firstNameTextView"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:text="@string/first_name"
+            android:layout_gravity="right"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <EditText
+            android:id="@+id/firstNameEditText"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:layout_gravity="fill_horizontal"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/lastNameTextView"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:text="@string/last_name"
+            android:layout_gravity="right"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <EditText
+            android:id="@+id/lastNameEditText"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:layout_gravity="fill_horizontal"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:text="@string/email_address"
+            android:layout_gravity="right"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:inputType="textEmailAddress"
+            android:layout_gravity="fill_horizontal"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/genderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:text="@string/gender_buttons"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/maleRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male_button"/>
+            <RadioButton
+                android:id="@+id/femaleRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female_button"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:id="@+id/sign_in_button"
+            android:text="@string/sign_in_button"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:id="@+id/register_button"
+            android:text="@string/register_button"
+            />
+    </LinearLayout>
+</LinearLayout>
