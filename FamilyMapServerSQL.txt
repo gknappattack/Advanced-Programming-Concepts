@@ -1,0 +1,42 @@
+CREATE TABLE "Users" 
+(
+    UserName string not NULL PRIMARY KEY,
+    Password string not NULL,
+    Email string not NULL,
+    FirstName string not NULL,
+    LastName string not NULL,
+    Gender string check (Gender == "m" or Gender =="f"),
+    PersonID string not NULL
+);
+
+CREATE TABLE "Persons" 
+(
+    PersonID string not NULL PRIMARY KEY,
+    AssociatedUserName string not NULL,
+    FirstName string not NULL,
+    LastName string not NULL,
+    Gender string check (Gender == "m" or Gender =="f"),
+    FatherID PersonID,
+    MotherID PersonID,
+    SpouseID PersonID
+);
+
+CREATE TABLE "Events"
+(
+    EventID string not NULL PRIMARY KEY,
+    AssociatedUserName string not NULL,
+    PersonID string not NULL,
+    Latitude float not NULL,
+    Longitude float not NULL,
+    Country string not NULL,
+    City string not NULL,
+    EventType string not NULL,
+    Year int not NULL
+);
+
+CREATE TABLE "Authorization Token"
+(
+    TokenValue string not NULL PRIMARY KEY,
+    AssociatedUser string not NULL,
+    AccessTime timestamp
+);
